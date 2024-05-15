@@ -84,7 +84,7 @@ while True:
 
             diff_lock = True        
 
-        guess_str = f'\n[{correct_guess}] Enter Your Guess: '
+        guess_str = f'\nEnter Your Guess: '
         client_socket.sendall(guess_str.encode())                               # Send ['Guess' Input]
         guess_input = client_socket.recv(1024)                                  # Receive ['Guess' Input]
         guess_ans = int(guess_input.decode().strip())                           # Decode ['Guess' Input]
